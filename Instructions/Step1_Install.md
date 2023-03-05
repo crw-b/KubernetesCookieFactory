@@ -8,8 +8,10 @@
 ## Clone Repo
 To get started, clone this repo onto your local machine and navigate to the root of the package using your terminal.
 
+If you need more instructions on how to clone a github repository, follow the instructions in the [GitHub Docs](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository).
+
 ## Install Kubectl, Kind, and Docker on Local Machine
-If you have already installed both Kubernetes and Kind, you can skip to "Create a Cluster". If you are unsure if you already have them installed, you can check their versions.
+If you have already installed Kubectl, Kind and Docker, you can skip to [Part 2: Create a Docker Image and Kind Cluster](./Step2_Create.md). If you are unsure if you already have them installed, you can check their versions.
 
 #### Check if kubectl is installed:
 ```
@@ -34,7 +36,12 @@ kind version
 #### Install kind:
 https://kind.sigs.k8s.io/docs/user/quick-start/#installation
 
-### Install Docker:
+#### To check if Docker is installed:
+```
+docker -v
+```
+
+### Install Docker Desktop:
 https://docs.docker.com/desktop/
 
 ## Next: [Create](./Step2_Create.md)

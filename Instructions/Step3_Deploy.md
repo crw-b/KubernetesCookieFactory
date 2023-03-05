@@ -27,9 +27,10 @@ To see your deployment:
 ```
 kubectl get deployments
 ```
+There should only be one deployment and it should state that it's a available to run the image on.
 
 ## Create a Proxy
-To create a proxy that will forward messages to the cluster-wide private network, open up a second terminal and run:
+To create a proxy that will forward messages to the cluster-wide private network, open up a **second terminal window** and run:
 ```
 echo -e "\n\n\n\e[92mStarting Proxy. After starting it will not output a response. Return to the first Terminal Tab\n]";
 kubectl proxy
@@ -40,10 +41,14 @@ Return to your original terminal (but do not close the second terminal) and run:
 ```
 curl http://localhost:8001/version
 ```
+
 ## Create a Pod Name Variable
 To create a Pod name and store in the environment variable POD_NAME:
 ```
 export POD_NAME=$(kubectl get pods -o go-template --template '{{range .items}}{{.metadata.name}}{{"\n"}}{{end}}')
+```
+Then, to check that we can use $POD_NAME to reference the name of the pod:
+```
 echo Name of the Pod: $POD_NAME
 ```
 ## Access Pod through API
@@ -67,5 +72,5 @@ Anything that gets sent to STDOUT will now be available in the logs. To retreive
 kubectl logs $POD_NAME
 ```
 
-## Next: [Bash](./Step4_Bash.md)
+## Next: [Shell](./Step4_Shell.md)
 Once you've completed the steps in this file, continue to learn how to run bash commands in a pod's container

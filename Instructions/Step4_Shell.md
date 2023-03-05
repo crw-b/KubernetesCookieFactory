@@ -1,4 +1,4 @@
-# 4. Bash Commands
+# 4. Shell Commands
 ## This file will cover how to...
 - Run commands directly on a container
   
@@ -6,23 +6,21 @@ To make sure your pods are running:
 ```
 kubectl get pods
 ```
-## Run Bash Commands on Container
-To execute commands directly on the container:
+## Run Shell Commands on Container
+To execute shell commands directly on the container:
 ```
 kubectl exec $POD_NAME -- env
 ```
-To start a bash session in the Pod's container:
+You can use the following to start using shell commands on a container:
 ```
-kubectl exec -ti $POD_NAME --bash
+kubectl exec -ti $POD_NAME -- /bin/sh 
 ```
-To run the NodeJS application on our newly opened console on the container you can type in cat and the name of the js file where the app's source code lies:
+
+To open the NodeJS application on our newly opened console you can type in cat and the name of the js file where the app's source code lies:
 ```
 cat server.js
 ```
-To check the application is up:
-```
-curl localhost:8080
-```
+
 ## Close Bash Session
 To close your container connection:
 ```
