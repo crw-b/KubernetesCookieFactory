@@ -1,5 +1,5 @@
 const http = require('http');
-const handleRequest = function(req, res) {
+const handleRequest = function(request, response) {
     response.writeHead(200);
     response.end("Hello World!");
 }

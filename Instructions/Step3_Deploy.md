@@ -32,14 +32,13 @@ There should only be one deployment and it should state that it's a available to
 ## Create a Proxy
 To create a proxy that will forward messages to the cluster-wide private network, open up a **second terminal window** and run:
 ```
-echo -e "\n\n\n\e[92mStarting Proxy. After starting it will not output a response. Return to the first Terminal Tab\n]";
 kubectl proxy
 ```
 To see all APIs hosted through the proxy endpoint, you can use the curl command.
 
 Return to your original terminal (but do not close the second terminal) and run:
 ```
-curl http://localhost:8001/version
+curl http://localhost:8001/api
 ```
 
 ## Create a Pod Name Variable
@@ -51,6 +50,7 @@ Then, to check that we can use $POD_NAME to reference the name of the pod:
 ```
 echo Name of the Pod: $POD_NAME
 ```
+
 ## Access Pod through API
 To access the Pod through the API:
 ```
@@ -62,10 +62,6 @@ To view which containers are inside of each pod:
 kubectl describe pods
 ```
 
-To make sure you can access your pod via your 2nd terminal proxy, you can run another curl request in your 1st terminal:
-```
-curl http://localhost:8001/api/v1/namespaces/default/pods/$POD_NAME/proxy/
-```
 ## Read Logs
 Anything that gets sent to STDOUT will now be available in the logs. To retreive these logs:
 ```
