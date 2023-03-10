@@ -7,5 +7,5 @@ The demo found in this repo is based off of the [Learn Kubernetes Basics Interac
 ### Step 1: [Install and Clone](./Instructions/Step1_Install.md)
 ### Step 2: [Create a Docker Image and a Kind Cluster](./Instructions/Step2_Create.md)
 ### Step 3: [Deploy and Scale App](./Instructions/Step3_Deploy.md)
-### Step 4: [Create, Delete, and Expose Services](./Instructions/Step5_Services.md)
+### Step 4: [Create, Delete, and Expose Services](./Instructions/Step4_Services.md)
 ### Step 5: [Clean Up](./Instructions/Step5_Clean.md)
