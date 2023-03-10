@@ -1,5 +1,6 @@
 const http = require('http');
 const handleRequest = function(request, response) {
+    console.log("Requesting a Hello")
     response.writeHead(200);
     response.end("Hello World!");
 }

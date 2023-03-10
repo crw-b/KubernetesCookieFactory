@@ -54,4 +54,4 @@ docker exec -it cookie-factory-control-plane crictl images
 Amongst the images for kind and kubernetes there should be one named docker.io/library/cookieapp with the tag v1.
 
 ## Next: [Deploy](./Step3_Deploy.md)
-Once you've completed the steps in this file, continue to learn how to deploy the app.
+Once you've completed the steps in this file, continue to learn how to create a deployment and scale it.

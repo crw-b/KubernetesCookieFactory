@@ -10,6 +10,12 @@ To get started, clone this repo onto your local machine and navigate to the root
 
 If you need more instructions on how to clone a github repository, follow the instructions in the [GitHub Docs](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository).
 
+## Node.js
+This is a Node.js app. To get started running node on your computer you will need to have it installed:
+[Install Node.js](https://nodejs.org/en/download/)
+
+You can also edit the this package by replacing the server.js and package.json with relevant files of another language then updating the Dockerfile.
+
 ## Install Kubectl, Kind, and Docker on Local Machine
 If you have already installed Kubectl, Kind and Docker, you can skip to [Part 2: Create a Docker Image and Kind Cluster](./Step2_Create.md). If you are unsure if you already have them installed, you can check their versions.
 

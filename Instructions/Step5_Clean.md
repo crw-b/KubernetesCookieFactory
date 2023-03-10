@@ -1,4 +1,4 @@
-# 7. Clean-Up
+# 5. Clean-Up
 If you still have the proxy 2nd terminal running, you can close it out using *ctrl + c*
 
 To check if you are stil using any resources:
